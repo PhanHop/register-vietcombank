@@ -1,0 +1,9 @@
+.activeBtn {
+  background: linear-gradient(89.75deg, #F8FAEC 2.88%, #EAF7FF 99.78%);
+  border-radius: 4px;
+}
+
+.activeModal {
+  background: linear-gradient(89.75deg, #F8FAEC 2.88%, #EAF7FF 99.78%);
+}
+
