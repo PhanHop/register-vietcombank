@@ -95,7 +95,7 @@ export default function Form4({}: Props) {
                 })}
               </div>
             </div>
-            <Link href={"./form6"}>
+            <Link href={"./form5"}>
               <Button text="Tiếp tục" />
             </Link>
           </div>

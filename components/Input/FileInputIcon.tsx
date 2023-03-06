@@ -15,7 +15,7 @@ export default function FileInputIcon({
   clickFile,
 }: Props) {
   return (
-    <div className="flex flex-col gap-y-2">
+    <div className="flex flex-col gap-y-2 bg-white">
       <label htmlFor="" className="text-sm text-[#000000]">
         {label}
       </label>

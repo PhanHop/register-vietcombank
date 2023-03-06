@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import Form from "@/components/Form";
 import Input from "@/components/Input";
+import ModalSuccess from "@/components/Modal/ModalSuccess";
 import SelectOption from "@/components/Select";
 import { Label } from "@headlessui/react/dist/components/label/label";
 import Link from "next/link";
@@ -73,43 +74,64 @@ export default function Form6({}: Props) {
   function handleClickProvince() {
     setProvince(true);
   }
-  console.log({province});
-  
+
   return (
     <div className="w-full h-full">
       <Form activeIndex={[1, 2, 3, 4, 5]}>
-        <div className="w-full h-[calc(100vh_-_64px)] flex justify-center">
+        <div className="w-full h-full flex justify-center pt-2 pb-16">
           <div className="w-full h-full flex flex-col gap-y-10 items-start justify-center">
             <div className="flex flex-col gap-y-16 w-full">
               <div className="grid grid-cols-2 gap-x-16 w-full">
                 <div className="flex gap-y-6 2xl:gap-y-8 flex-col">
                   <div className="text-2xl">Chọn chi nhánh phục vụ</div>
                   <div className="flex flex-col gap-y-4 w-full col-span-1">
-                    {OfficeInfo?.map((item) => {
-                      return (
-                        <SelectOption
-                          key={item?.placeHolder}
-                          placeHolder={item?.placeHolder}
-                          value={item?.value}
-                          clickProvice={handleClickProvince}
-                          defaultValue={item?.value?.[0]?.value}
-                        />
-                      );
-                    })}
+                    {province &&
+                      OfficeInfo?.map((item) => {
+                        return (
+                          <SelectOption
+                            key={item?.placeHolder}
+                            placeHolder={item?.placeHolder}
+                            value={item?.value}
+                            clickProvice={handleClickProvince}
+                            defaultValue={item?.value?.[0]?.value}
+                          />
+                        );
+                      })}
+                    {!province &&
+                      OfficeInfo?.map((item) => {
+                        return (
+                          <SelectOption
+                            key={item?.placeHolder}
+                            placeHolder={item?.placeHolder}
+                            value={item?.value}
+                            clickProvice={handleClickProvince}
+                          />
+                        );
+                      })}
                   </div>
                 </div>
                 <div className="flex gap-y-6 2xl:gap-y-8 flex-col">
                   <div className="text-2xl">Thông tin liên hệ</div>
                   <div className="flex flex-col gap-y-4 w-full col-span-1">
-                    {ContactInfo?.map((item) => {
-                      return (
-                        <Input
-                          key={item?.placeHolder}
-                          placeHolder={item?.placeHolder}
-                          value={item?.value}
-                        />
-                      );
-                    })}
+                    {province &&
+                      ContactInfo?.map((item) => {
+                        return (
+                          <Input
+                            key={item?.placeHolder}
+                            placeHolder={item?.placeHolder}
+                            value={item?.value}
+                          />
+                        );
+                      })}
+                    {!province &&
+                      ContactInfo?.map((item) => {
+                        return (
+                          <Input
+                            key={item?.placeHolder}
+                            placeHolder={item?.placeHolder}
+                          />
+                        );
+                      })}
                   </div>
                 </div>
               </div>
@@ -117,22 +139,30 @@ export default function Form6({}: Props) {
                 <div className="flex gap-y-6 2xl:gap-y-8 flex-col">
                   <div className="text-2xl">Đặt lịch hẹn</div>
                   <div className="grid grid-cols-2 gap-x-16 gap-y-4 w-full col-span-1">
-                    {Calendar?.map((item) => {
-                      return (
-                        <Input
-                          key={item?.placeHolder}
-                          placeHolder={item?.placeHolder}
-                          value={item?.value}
-                        />
-                      );
-                    })}
+                    {province &&
+                      Calendar?.map((item) => {
+                        return (
+                          <Input
+                            key={item?.placeHolder}
+                            placeHolder={item?.placeHolder}
+                            value={item?.value}
+                          />
+                        );
+                      })}
+                    {!province &&
+                      Calendar?.map((item) => {
+                        return (
+                          <Input
+                            key={item?.placeHolder}
+                            placeHolder={item?.placeHolder}
+                          />
+                        );
+                      })}
                   </div>
                 </div>
               </div>
             </div>
-            <Link href={"./form3"}>
-              <Button text="Tiếp tục" />
-            </Link>
+            <ModalSuccess trigger={<Button text="Tiếp tục" />}></ModalSuccess>
           </div>
         </div>
       </Form>

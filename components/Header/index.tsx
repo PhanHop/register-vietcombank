@@ -58,10 +58,10 @@ export default function Header() {
       </div>
       <div className="mt-4 px-8 pb-2 flex justify-between">
         <div className="flex gap-x-8 items-center">
-          <div className="w-[130px] h-[42px] relative p-4">
+          <div className="w-[156px] h-[62px] relative p-4">
             <Link href={"/"}>
               <Image
-                src={"/VCB_Final_Logo_60_nam_01.png"}
+                src={"/Logo1.jpg"}
                 alt="vcb"
                 layout="fill"
                 className="relative"

@@ -16,7 +16,7 @@ export default function Input({ label, value, placeHolder, ...rest }: Props) {
         placeholder={placeHolder}
         value={value}
         type="text"
-        className="h-12 px-4 w-full rounded-[12px] border-[2px] border-solid border-[#EAEAEA]"
+        className="h-12 px-4 w-full rounded-[12px] border-[2px] border-solid border-[#EAEAEA] focus:outline-[#007A47]"
         {...rest}
       />
     </div>

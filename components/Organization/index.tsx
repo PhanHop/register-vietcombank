@@ -27,54 +27,16 @@ export default function Home() {
       <div className="w-full">
         <Header />
         <div
-          className={classNames("p-8 relative w-full h-[calc(100vh_-_98px)] ")}
+          className={classNames(
+            "px-8 pt-8 relative w-full h-[calc(100vh_-_172px)] "
+          )}
         >
           <div
             className={classNames(
               "w-full h-full flex flex-col  rounded-2xl",
               styles.bgImag
             )}
-          >
-            <div className="flex w-full h-full justify-center ">
-              <div className="flex flex-col justify-start items-start gap-y-20] absolute bottom-[72px]">
-                <div className="flex">
-                  {content?.map((item, index) => {
-                    return (
-                      <div
-                        key={item?.label}
-                        className={classNames(
-                          "py-4 w-[238px] flex items-center flex-col gap-y-3 bg-[#ffffff] px-8 align-center",
-                          {
-                            "border-solid border-r-[1px] border-[#D4F156]":
-                              index !== 4,
-                          },
-                          { "rounded-r-[120px]": index === 4 },
-                          { "rounded-l-[120px]": index === 0 }
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            "w-20 h-20 bg-[#F4F4F4] rounded-[56px] flex items-center justify-center",
-                            index === 2 && styles.boxShadow
-                          )}
-                        >
-                          {item?.icon}
-                        </div>
-                        <p
-                          className={classNames(
-                            index === 2 && styles.contentColor,
-                            "text-[18px] leading-[26px] font-medium text-center"
-                          )}
-                        >
-                          {item?.label}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
+          ></div>
         </div>
       </div>
       <Transition
@@ -82,11 +44,11 @@ export default function Home() {
         enter="transition-all duration-[800ms] delay-[1000ms] ease-in-out"
         enterFrom="opacity-0 translate-y-[-40px]"
         enterTo="opacity-1 translate-y-0"
-        className="fixed bottom-[80px] right-[52px]"
+        className={classNames("fixed bottom-[100px] right-[52px] z-10")}
       >
         <div
           className={classNames(
-            " p-8 bg-[#ffffff] rounded-[32px] flex flex-col gap-y-[60px]",
+            " p-8 bg-[#ffffff] rounded-[32px] flex flex-col gap-y-[60px] ",
             styles.boxShadowChat
           )}
         >
@@ -113,8 +75,48 @@ export default function Home() {
           </div>
         </div>
       </Transition>
-      <div className="fixed bottom-4 right-[52px]">
+      <div className="fixed bottom-10 right-[52px]">
         <ChatIcon />
+      </div>
+      <div className="flex w-full h-full justify-center fixed bottom-2">
+        <div className="flex flex-col justify-start items-start gap-y-20] absolute bottom-[72px]">
+          <div className={classNames("flex", styles.bgcolor)}>
+            {content?.map((item, index) => {
+              return (
+                <div
+                  key={item?.label}
+                  className={classNames(
+                    "py-4 w-[238px] flex items-center flex-col gap-y-3 px-8 align-center",
+                    {
+                      "border-solid border-r-[1px] border-[#D4F156]":
+                        index !== 4,
+                    },
+                    { "rounded-r-[120px]": index === 4 },
+                    { "rounded-l-[120px]": index === 0 },
+                    index !== 2 ? "bg-[#FAFAFACC]" : "bg-[#FAFAFA]"
+                  )}
+                >
+                  <div
+                    className={classNames(
+                      "w-20 h-20 bg-[#F4F4F4] rounded-[56px] flex items-center justify-center",
+                      index === 2 && styles.boxShadow
+                    )}
+                  >
+                    {item?.icon}
+                  </div>
+                  <p
+                    className={classNames(
+                      index === 2 && styles.contentColor,
+                      "text-[18px] leading-[26px] font-medium text-center"
+                    )}
+                  >
+                    {item?.label}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

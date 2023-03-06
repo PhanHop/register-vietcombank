@@ -12,16 +12,16 @@ export default function Form3({}: Props) {
   const [phone, setPhone] = useState("");
   const [valueChecked, setValueChecked] = useState(-1);
   const resultInputs = [
-    { number: phone + "999999999", money: "6,999,999đ" },
-    { number: phone + "888889999", money: "4,999,999đ" },
-    { number: phone + "666666666", money: "5,999,999đ" },
-    { number: phone + "626262626", money: "3,999,999đ" },
-    { number: phone + "222222222", money: "8,999,999đ" },
+    { number: phone + "123 456 7899", money: "5,000,000đ" },
+    { number: phone + "123 333 4444", money: "3,000,000đ" },
+    { number: phone + "123 456 8888", money: "3,000,000đ" },
+    { number: phone + "123 455 6666", money: "2,000,000đ" },
+    { number: phone + "123 123 1231", money: "1,500,000đ" },
   ];
   return (
     <div className="">
       <Form activeIndex={[1, 2]}>
-        <div className="w-full h-[calc(100vh_-_62px)] flex justify-center">
+        <div className="w-full min-h-[100vh] flex justify-center">
           <div className="flex w-[296px] 2xl:w-[360px] flex-col justify-center items-center gap-y-14">
             <div className="flex w-full flex-col gap-y-10 items-center justify-center">
               <div className="w-full flex items-center">
@@ -40,6 +40,7 @@ export default function Form3({}: Props) {
               <div className="flex w-full flex-col gap-y-8">
                 <div className="flex flex-col gap-y-2">
                   <Input
+                    value={resultInputs[0]?.number}
                     type={"number"}
                     label="Số tài khoản"
                     placeHolder="Nhập số tài khoản"
