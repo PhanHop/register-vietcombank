@@ -53,7 +53,7 @@ export default function Register() {
                   </div>
                 </div>
               </div>
-              <Link href={"/nhap-thong-tin"}>
+              <Link href={"/form1"}>
                 <div className="bg-[#D4F156] px-6 py-[14px] text-[16px] leading-5 text-[#000000] rounded-[12px] max-w-[177px]">
                   Trải nghiệm ngay
                 </div>
