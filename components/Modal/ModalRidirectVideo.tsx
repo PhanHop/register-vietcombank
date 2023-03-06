@@ -1,38 +1,20 @@
 import { Dialog, Transition } from "@headlessui/react";
-import classNames from "classnames";
 import { Fragment, ReactNode, useState } from "react";
-import styles from "./styles.module.css";
-import SalaryIcon from "assets/icon/Salary_account.svg";
-import CurrentAccountIcon from "assets/icon/Current_account.svg";
-import ProductHubIcon from "assets/icon/Product_Hub.svg";
-import CheckIcon from "assets/icon/ic_24system_checkshield_outlined_ink1-1.svg";
+import CloseIcon from "assets/icon/ic_24system_close_outlined_ink1.svg";
 import DoneIcon from "assets/icon/Union.svg";
 import Link from "next/link";
 
 type Props = {
   trigger?: ReactNode;
 };
-export default function ModalSuccess({ trigger }: Props) {
-  let [isOpen, setIsOpen] = useState(false);
+export default function ModalRidirectVideo({ trigger }: Props) {
+  let [isOpen, setIsOpen] = useState(true);
 
   function closeModal() {
     setIsOpen(false);
   }
-
-  function openModal() {
-    setIsOpen(true);
-  }
   return (
     <>
-      <div
-        onClick={openModal}
-        className={classNames(
-          "px-[10px] py-2 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer"
-        )}
-      >
-        {trigger}
-      </div>
-
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -59,6 +41,12 @@ export default function ModalSuccess({ trigger }: Props) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-[466px] transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+                  <div
+                    className="absolute top-4 right-4 hover:cursor-pointer"
+                    onClick={closeModal}
+                  >
+                    <CloseIcon />
+                  </div>
                   <div className="flex flex-col">
                     <div className="flex flex-col gap-y-6 pt-12 pb-9">
                       <div className="flex gap-y-6 flex-col px-12 text-center ">
@@ -67,36 +55,21 @@ export default function ModalSuccess({ trigger }: Props) {
                             <DoneIcon />
                           </div>
                         </div>
-                        <div className="text-2xl">Xác nhận thành công</div>
-                        <div className="text-base text-[#6F6F6F]">
-                          Chi nhánh Hồ Chí Minh sẽ liên hệ ngay với quý khách để
-                          hoàn thiện hồ sơ. Hoặc Quý khách có thể liên hệ Chi
-                          nhánh theo số điện thoại 028 3829 7245 hoặc email
-                          xyz@vietcombank.com.vn.
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-y-2.5 px-12">
-                        <div className="flex gap-x-2">
-                          <CheckIcon />
-                          <div className="text-sm">
-                            Email đã được gửi tới khách hàng
-                          </div>
-                        </div>
-                        <div className="flex gap-x-2">
-                          <CheckIcon />
-                          <div className="text-sm">
-                            Email đã được gửi đến chi nhánh phục vụ
-                          </div>
+                        <div className="text-2xl w-[370px]">
+                          Quý khách muốn trải nghiệm dịch vụ ngân hàng số cho
+                          khách hàng doanh nghiệp ngay?
                         </div>
                       </div>
                     </div>
                     <div className="p-4 border-t-[1px] border-solid border-[#EAEAEA]">
-                      <button
-                        className="bg-[#007A47] w-full h-full py-[14px] rounded-[12px] text-white outline-none "
-                        onClick={closeModal}
-                      >
-                        Hoàn tất
-                      </button>
+                      <Link href={'/video'} className="outline-none">
+                        <button
+                          className="bg-[#007A47] w-full h-full py-[14px] rounded-[12px] text-white outline-none"
+                          onClick={closeModal}
+                        >
+                          Đồng ý
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </Dialog.Panel>

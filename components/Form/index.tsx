@@ -33,7 +33,7 @@ const Steps = [
     step: 4,
   },
   {
-    title: "Hoàn thành đăng ký trực tuyến ",
+    title: "Đặt lịch hẹn > Hoàn thành đăng ký trực tuyến",
     value:
       "Khách hàng lựa chọn chi nhánh phục vụ và lịch hẹn phù hợp để hoàn thành đăng ký",
     step: 5,
