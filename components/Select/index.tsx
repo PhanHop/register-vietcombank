@@ -32,7 +32,6 @@ export default function SelectOption({
         defaultValue={defaultValue}
         style={{ width: "100%", height: "48px" }}
         options={value}
-        onChange={(value) => clickProvice()}
       />
     </div>
   );

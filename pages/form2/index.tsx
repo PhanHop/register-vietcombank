@@ -7,7 +7,10 @@ import React from "react";
 type Props = {};
 
 export default function Form1({}: Props) {
-  const saved = localStorage.getItem("msst");
+  let saved;
+  if (typeof window !== "undefined") {
+    saved = localStorage.getItem("msst");
+  }
   return (
     <div className="">
       <Form activeIndex={[1]}>
@@ -19,7 +22,10 @@ export default function Form1({}: Props) {
             <div className="grid grid-cols-2 w-full gap-x-8">
               <div className="flex w-full col-span-1">
                 <div className="gap-y-8 flex flex-col w-full">
-                  <Input label="Mã số thuế doanh nghiệp" value={saved || "2003902"} />
+                  <Input
+                    label="Mã số thuế doanh nghiệp"
+                    value={saved || "2003902"}
+                  />
                   <Input label="Tên doanh nghiệp" value="Công ty TNHH ABC" />
                   <Input label="Tên viết tắt" value="ABC" />
                 </div>
