@@ -10,6 +10,15 @@ import HandIcon from "assets/icon/ic_24system_handcash_outlined_ink1.svg";
 import MoneyIcon from "assets/icon/c.svg";
 import CurrentIcon from "assets/icon/Current_account2.svg";
 import ContentItem from "./ContentItem";
+import LogoVideoIcon from "assets/icon/LogoVideo.svg";
+import ArrowUp from "assets/icon/Arrow_Up_Video.svg";
+import ArrowDownSmall from "assets/icon/Arrow-Down_Small.svg";
+import ArrowDown from "assets/icon/Arrow-Down.svg";
+import ArrowLeft from "assets/icon/Arrow-Left.svg";
+import CardLeft from "assets/icon/card-1.svg";
+import CardRight from "assets/icon/card_video.svg";
+import ModalVideo from "@/components/Modal/ModalVideo";
+
 type Props = {};
 
 export default function index({}: Props) {
@@ -20,27 +29,59 @@ export default function index({}: Props) {
         <div className={classNames("px-8 pt-8 relative w-full")}>
           <div
             className={classNames(
-              "w-full aspect-[1340/760] h-full flex flex-col rounded-[12px] px-8 pt-8 pb-10",
+              "w-full aspect-[1340/760] h-full flex flex-col rounded-[12px] px-8 pt-8 pb-[120px]",
               styles.bgImag
             )}
           >
-            <div className="flex justify-center mt-4 relative">
-              <ContentItem content="Quản lý Tài khoản" icon={<PrivacyIcon />} />
-            </div>
-            <div className="flex justify-center absolute bottom-12 left-0 w-[calc(100%)] ">
-              <ContentItem content="Quản lý Thanh khoản" icon={<HandIcon />} />
-            </div>
-            <div className="flex justify-center absolute bottom-[150px] left-[15%]">
-              <ContentItem
-                content="Quản lý Khoản phải trả"
-                icon={<BillIcon />}
-              />
-            </div>
-            <div className="flex justify-center absolute bottom-[150px] right-[15%] ">
-              <ContentItem
-                content="Quản lý Khoản phải thu"
-                icon={<MoneyIcon />}
-              />
+            <div className="w-full h-full flex justify-center items-center pb-20">
+              <div className="flex flex-col gap-y-0">
+                <div className="flex flex-col gap-y-3 items-center mb-[-60px]">
+                  <ContentItem
+                    content="Quản lý Tài khoản"
+                    icon={<PrivacyIcon />}
+                  />
+                  <ArrowUp />
+                </div>
+                <div className="w-full flex gap-x-3 justify-center items-center">
+                  <div className="relative">
+                    <CardLeft />
+                    <div className="flex justify-center absolute flex-col items-center left-[-45px] gap-y-3">
+                      <ArrowDown />
+                      <ContentItem
+                        content="Quản lý Khoản phải trả"
+                        icon={<BillIcon />}
+                      />
+                    </div>
+                  </div>
+                  <ArrowLeft />
+                  <div className="relative">
+                    <LogoVideoIcon />
+                    <div className="flex justify-center absolute flex-col items-center top-[230px] gap-y-3">
+                      <ArrowDown />
+                      <ContentItem
+                        content="Quản lý Thanh khoản"
+                        icon={<BillIcon />}
+                      />
+                    </div>
+                  </div>
+                  <ArrowLeft />
+                  <div className="relative">
+                    <CardRight />
+                    <div className="flex justify-center absolute flex-col items-center left-[-45px] gap-y-3">
+                      <ArrowDown />
+                      <ModalVideo
+                        urlVideo="https://www.youtube.com/watch?v=GatNL0mmQGc"
+                        trigger={
+                          <ContentItem
+                            content="Quản lý Khoản phải thu"
+                            icon={<BillIcon />}
+                          />
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

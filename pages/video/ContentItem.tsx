@@ -10,7 +10,7 @@ export default function ContentItem({ content, icon }: Props) {
   return (
     <div
       className={classNames(
-        "w-[284px] h-[118px] flex flex-col gap-y-2 items-center justify-center",
+        "w-[284px] h-[118px] flex flex-col gap-y-2 items-center justify-center hover:cursor-pointer",
         styles.contentItem
       )}
     >
