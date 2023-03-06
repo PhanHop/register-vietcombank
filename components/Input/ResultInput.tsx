@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React from "react";
 
 type Props = {
-  number?: string;
+  number?: number;
   money?: string;
   classNameDiv?: string;
 } & JSX.IntrinsicElements["input"];

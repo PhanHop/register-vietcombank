@@ -4,7 +4,7 @@ import Input from "@/components/Input";
 import ResultInput from "@/components/Input/ResultInput";
 import PartyIcon from "assets/icon/Party_Popper.svg";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 type Props = {};
 
@@ -12,12 +12,14 @@ export default function Form3({}: Props) {
   const [phone, setPhone] = useState("");
   const [valueChecked, setValueChecked] = useState(-1);
   const resultInputs = [
-    { number: phone + "123 456 7899", money: "5,000,000đ" },
-    { number: phone + "123 333 4444", money: "3,000,000đ" },
-    { number: phone + "123 456 8888", money: "3,000,000đ" },
-    { number: phone + "123 455 6666", money: "2,000,000đ" },
-    { number: phone + "123 123 1231", money: "1,500,000đ" },
+    { number: 123567899, money: "5,000,000đ" },
+    { number: 1233334444, money: "3,000,000đ" },
+    { number: 1234568888, money: "3,000,000đ" },
+    { number: 1234556666, money: "2,000,000đ" },
+    { number: 1231231231, money: "1,500,000đ" },
   ];
+  const [number, setNumber] = useState<number>();
+
   return (
     <div className="">
       <Form activeIndex={[1, 2]}>
@@ -40,7 +42,7 @@ export default function Form3({}: Props) {
               <div className="flex w-full flex-col gap-y-8">
                 <div className="flex flex-col gap-y-2">
                   <Input
-                    value={resultInputs[0]?.number}
+                    value={number}
                     type={"number"}
                     label="Số tài khoản"
                     placeHolder="Nhập số tài khoản"
@@ -54,20 +56,27 @@ export default function Form3({}: Props) {
                   <div className="text-sm">Gợi ý số đẹp</div>
                   {resultInputs?.map((item, index) => {
                     return (
-                      <ResultInput
+                      <div
+                        className="hover:cursor-pointer"
                         key={item?.number}
-                        number={!!phone ? item?.number?.slice(0, 10) : ""}
-                        money={!!phone ? item?.money : ""}
-                        name="phone"
-                        classNameDiv={
-                          valueChecked === index ? "!border-[#007A47]" : ""
-                        }
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setValueChecked(index);
+                        onClick={() => {
+                          if (!!phone) {
+                            setValueChecked(index), setNumber(item?.number);
                           }
                         }}
-                      />
+                      >
+                        <ResultInput
+                          number={item?.number}
+                          money={!!phone ? item?.money : ""}
+                          name="phone"
+                          classNameDiv={
+                            phone && valueChecked === index
+                              ? "!border-[#007A47]"
+                              : ""
+                          }
+                          checked={!!phone && valueChecked === index}
+                        />
+                      </div>
                     );
                   })}
                 </div>
