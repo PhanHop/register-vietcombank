@@ -1,0 +1,6 @@
+.customSelect div {
+  height: 50px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

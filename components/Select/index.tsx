@@ -1,26 +1,39 @@
 import React from "react";
-
+import { Select } from "antd";
+import styles from "./styles.module.css";
+type SelectProps = {
+  value?: string;
+};
 type Props = {
   label?: string;
-  value?: string;
+  value?: SelectProps[];
   placeHolder?: string;
+  clickProvice?: () => void;
+  defaultValue?: string;
 };
 
-export default function Select({ label, value, placeHolder, ...rest }: Props) {
+export default function SelectOption({
+  label,
+  value,
+  placeHolder,
+  clickProvice,
+  defaultValue,
+  ...rest
+}: Props) {
   return (
     <div className="flex flex-col gap-y-2">
       <label htmlFor="" className="text-sm text-[#000000]">
         {label}
       </label>
-      <select
-        name="cars"
-        id="cars"
-        className="h-12 px-4 w-full rounded-[12px] border-[2px] border-solid border-[#EAEAEA] outline-none"
-      >
-        <option value="Tổ chức có tư cách pháp nhânvo" className="">
-          Tổ chức có tư cách pháp nhân
-        </option>
-      </select>
+      <Select
+        placeholder={placeHolder}
+        className={styles.customSelect}
+        size="large"
+        defaultValue={defaultValue}
+        style={{ width: "100%", height: "48px" }}
+        options={value}
+        onChange={(value) => clickProvice()}
+      />
     </div>
   );
 }

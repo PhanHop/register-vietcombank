@@ -1,12 +1,11 @@
 import Form from "@/components/Form";
-import Input from "@/components/Input";
 import React, { useState } from "react";
 import PdfIcon from "assets/icon/PDF.svg";
 import JpgIcon from "assets/icon/JPG.svg";
 import FileInputIcon from "@/components/Input/FileInputIcon";
 import Link from "next/link";
 import Button from "@/components/Button";
-import Select from "@/components/Select";
+import SelectOption from "@/components/Select";
 type Props = {};
 
 export default function Form4({}: Props) {
@@ -57,7 +56,11 @@ export default function Form4({}: Props) {
               </div>
             </div>
             <div className="w-full">
-              <Select label="Loại hình doanh nghiệp" />
+              <SelectOption
+                label="Loại hình doanh nghiệp"
+                value={[{ value: "Tổ chức có tư cách pháp nhân" }]}
+                defaultValue="Tổ chức có tư cách pháp nhân"
+              />
             </div>
             <div className="w-full h-[1px] bg-[#EAEAEA]"></div>
             <div className="grid grid-cols-2 gap-x-10 w-full">
@@ -92,7 +95,7 @@ export default function Form4({}: Props) {
                 })}
               </div>
             </div>
-            <Link href={"./form3"}>
+            <Link href={"./form6"}>
               <Button text="Tiếp tục" />
             </Link>
           </div>
