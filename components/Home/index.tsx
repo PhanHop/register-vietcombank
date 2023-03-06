@@ -21,7 +21,7 @@ export default function Home() {
       <Header />
       <div
         className={classNames(
-          "px-8 pt-8 relative w-full  h-[calc(100vh_-_172px)]"
+          "px-8 pt-8 relative w-full  h-[calc(100vh_-_164px)]"
         )}
       >
         <div

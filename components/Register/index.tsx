@@ -20,11 +20,8 @@ export default function Register() {
           >
             <div className="w-[450px] h-full flex flex-col justify-center gap-y-10">
               <div className="flex flex-col gap-y-8 justify-center">
-                <div className="text-[24px] leading-8 text-[#000000]">
-                  Đăng ký tài khoản trực tuyến
-                </div>
                 <div className="text-[32px] leading-10 font-medium">
-                  Gói tài khoản trực tuyến dành riêng cho doanh nghiệp
+                  Mở tài khoản trực tuyến của khách hàng tổ chức
                 </div>
                 <div className="flex flex-col gap-y-4">
                   <div className="flex gap-x-2 items-center">

@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 type Props = {};
 
 export default function Form1({}: Props) {
-  const [msst, setMsst] = useState("");
+  const [msst, setMsst] = useState("2001241");
   return (
     <div className="">
       <Form activeIndex={[1]}>
@@ -20,6 +20,7 @@ export default function Form1({}: Props) {
               <Input
                 label="Mã số thuế doanh nghiệp"
                 onChange={(e) => setMsst(e.target.value)}
+                value={msst}
               />
             </div>
             <Link

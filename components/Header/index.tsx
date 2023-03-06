@@ -5,6 +5,8 @@ import BankIcon from "/assets/icon/Bank.svg";
 import Image from "next/image";
 import MyModal from "../Modal";
 import Link from "next/link";
+import classNames from "classnames";
+import styles from "./styles.module.css";
 
 type Props = {};
 const header1 = ["Cá nhân", "Tổ chức", "Khách hàng ưu tiên"];
@@ -25,13 +27,29 @@ export default function Header() {
             {header1?.map((item: string) => {
               if (item === "Tổ chức") {
                 return (
-                  <MyModal key={item} trigger={<div key={item}>{item}</div>} />
+                  <MyModal
+                    key={item}
+                    trigger={
+                      <div
+                        key={item}
+                        className={classNames(
+                          "px-[10px] py-2 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer",
+                          styles.activeBtn
+                        )}
+                      >
+                        {item}
+                      </div>
+                    }
+                  />
                 );
               }
               return (
                 <div
                   key={item}
-                  className="px-[10px] py-2 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer"
+                  className={classNames(
+                    "px-[10px] py-2 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer",
+                    styles.activeBtn
+                  )}
                 >
                   {item}
                 </div>
@@ -43,7 +61,10 @@ export default function Header() {
               return (
                 <div
                   key={item}
-                  className="px-[10px] py-2 text-[14px] font-semibold text-[#144C27]"
+                  className={classNames(
+                    "px-[10px] py-2 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer",
+                    styles.activeBtn
+                  )}
                 >
                   {item}
                 </div>
@@ -56,7 +77,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="mt-4 px-8 pb-2 flex justify-between">
+      <div className="mt-2 px-8 pb-2 flex justify-between">
         <div className="flex gap-x-8 items-center">
           <div className="w-[156px] h-[62px] relative p-4">
             <Link href={"/"}>

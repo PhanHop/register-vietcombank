@@ -39,15 +39,7 @@ export default function MyModal({ trigger }: Props) {
   ];
   return (
     <>
-      <div
-        onClick={openModal}
-        className={classNames(
-          "px-[10px] py-2 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer",
-          styles.activeBtn
-        )}
-      >
-        {trigger}
-      </div>
+      <div onClick={openModal}>{trigger}</div>
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -74,8 +66,8 @@ export default function MyModal({ trigger }: Props) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="  transform overflow-hidden rounded-2xl bg-white py-5 text-left align-middle shadow-xl transition-all">
-                  <div className="border-b-[1px] border-solid pb-4">
+                <Dialog.Panel className="  transform overflow-hidden rounded-[24px] bg-white text-left align-middle shadow-xl transition-all">
+                  <div className="border-b-[1px] border-solid py-5">
                     <Dialog.Title
                       as="div"
                       className="text-[24px] font-medium leading-8 flex items-center justify-center"
@@ -83,7 +75,7 @@ export default function MyModal({ trigger }: Props) {
                       Loại hình tổ chức
                     </Dialog.Title>
                   </div>
-                  <div className="mt-4 px-6 flex gap-y-4 flex-col">
+                  <div className="pt-4 pb-6 px-6 flex gap-y-4 flex-col">
                     <div className="text-[16px] leading-6 text-[#000000] ">
                       Chào Quý Khách, anh/chị là...
                     </div>
@@ -102,7 +94,7 @@ export default function MyModal({ trigger }: Props) {
                                 className={classNames(
                                   "w-[517px] p-6 flex items-center gap-x-4 rounded-[16px] hover:cursor-pointer",
                                   { "bg-[#F7F7F7]": index !== 0 },
-                                  index === 0 && styles.activeModal
+                                  styles.activeModal
                                 )}
                               >
                                 <div className="w-20 h-20 rounded-[12px] bg-[#FFFFFF] p-4">
@@ -126,7 +118,7 @@ export default function MyModal({ trigger }: Props) {
                             className={classNames(
                               "w-[517px] p-6 flex items-center gap-x-4 rounded-[16px] hover:cursor-pointer",
                               { "bg-[#F7F7F7]": index !== 0 },
-                              index === 0 && styles.activeModal
+                              styles.activeModal
                             )}
                           >
                             <div className="w-20 h-20 rounded-[12px] bg-[#FFFFFF] p-4">

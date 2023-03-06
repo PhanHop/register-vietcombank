@@ -80,7 +80,7 @@ export default function Home() {
       </div>
       <div className="flex w-full h-full justify-center fixed bottom-2">
         <div className="flex flex-col justify-start items-start gap-y-20] absolute bottom-[72px]">
-          <div className={classNames("flex", styles.bgcolor)}>
+          <div className={classNames("flex rounded-[120px]", styles.bgcolor)}>
             {content?.map((item, index) => {
               return (
                 <div

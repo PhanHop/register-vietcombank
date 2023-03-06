@@ -1,6 +1,24 @@
 .customSelect div {
-  height: 50px !important;
+  height: 56px !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-color: red;
+}
+.customSelect .ant-select-selector:hover {
+  border-color: #a2a2a2 !important;
+  box-shadow: none !important;
+}
+/* :where(.customSelect .css-dev-only-do-not-override-1me4733).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+  border-color: #000000 !important;
+} */
+.customSelect:hover div {
+  border-color: #09A061 !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+}
+.customSelect:focus div {
+  border-color: #09A061 !important;
+  border-width: 2px !important;
+  border-style: solid !important;
 }

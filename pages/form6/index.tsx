@@ -14,27 +14,27 @@ export default function Form6({}: Props) {
     {
       placeHolder: "Chọn tỉnh thành phố",
       value: [
-        { value: "Thành phố Hà Nội" },
         { value: "Thành phố Hồ Chí Minh" },
+        { value: "Thành phố Hà Nội" },
         { value: "Thành phố Quảng Ninh" },
         { value: "Thành phố Đà Nẵng" },
       ],
     },
     {
       placeHolder: "Chọn quận/huyện",
-      value: [{ value: "Quận Hai Bà Trưng" }],
+      value: [{ value: "Quận 1" }],
     },
     {
       placeHolder: "Chọn phường xã",
-      value: [{ value: "Phương Minh Khai" }],
+      value: [{ value: "Phường Bến Nghé" }],
     },
     {
       placeHolder: "Chọn chi nhánh",
-      value: [{ value: "Chi nhánh Hoàng Mai, số 300 Minh..." }],
+      value: [{ value: "VCB Chi nhánh Hồ Chí Minh, số 5 Công Trường Mê Linh" }],
     },
     {
       placeHolder: "Nhập địa chỉ",
-      value: [{ value: "Số 100, P.Minh Khai, Hai Bà Trưng, Hà Nội" }],
+      value: [{ value: "Số 5 Công Trường Mê Linh, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh" }],
     },
   ];
   const ContactInfo = [
@@ -59,7 +59,7 @@ export default function Form6({}: Props) {
   const Calendar = [
     {
       placeHolder: "Nhập địa chỉ chi nhánh",
-      value: "Số 100, P.Minh Khai, Hai Bà Trưng, Hà Nội",
+      value: "Số 10 Nguyễn Huệ, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
     },
     {
       placeHolder: "Thời gian",
@@ -78,7 +78,7 @@ export default function Form6({}: Props) {
   return (
     <div className="w-full h-full">
       <Form activeIndex={[1, 2, 3, 4, 5]}>
-        <div className="w-full h-full flex justify-center pt-2 pb-16">
+        <div className="w-full h-full flex justify-center py-20 pb-16">
           <div className="w-full h-full flex flex-col gap-y-10 items-start justify-center">
             <div className="flex flex-col gap-y-16 w-full">
               <div className="grid grid-cols-2 gap-x-16 w-full">

@@ -15,8 +15,8 @@ export default function Form3({}: Props) {
     { number: 123567899, money: "5,000,000đ" },
     { number: 1233334444, money: "3,000,000đ" },
     { number: 1234568888, money: "3,000,000đ" },
-    { number: 1234556666, money: "2,000,000đ" },
-    { number: 1231231231, money: "1,500,000đ" },
+    { number: 1234556666, money: "0đ" },
+    { number: 1231231231, money: "0đ" },
   ];
   const [number, setNumber] = useState<number>();
 
@@ -46,7 +46,10 @@ export default function Form3({}: Props) {
                     type={"number"}
                     label="Số tài khoản"
                     placeHolder="Nhập số tài khoản"
-                    onChange={(e) => setPhone(e.target.value)}
+                    onFocus={(e) => {
+                      setNumber(123);
+                      setPhone('123');
+                    }}
                   />
                   <div className="text-base text-[#9F9F9F]">
                     Nhập tối thiểu 3 số, tối đa 13 số

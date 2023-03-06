@@ -6,6 +6,7 @@ import ChevronIcon from "assets/icon/ic_16inline_check_outlined_ink1.svg";
 import HeadPhoneIcon from "assets/icon/ic_24system_headphone_outlined_ink1.svg";
 import CurrentIcon from "assets/icon/Current_account2.svg";
 import ArchivedICon from "assets/icon/Archived.svg";
+import Link from "next/link";
 type Props = React.PropsWithChildren<{
   activeIndex: number[];
   classname?: string;
@@ -32,9 +33,9 @@ const Steps = [
     step: 4,
   },
   {
-    title: "Đặt lịch hẹn",
+    title: "Hoàn thành đăng ký trực tuyến ",
     value:
-      "Khách hàng chủ động đặt lịch hẹn với chuyên viên hỗ trợ theo yêu cầu",
+      "Khách hàng lựa chọn chi nhánh phục vụ và lịch hẹn phù hợp để hoàn thành đăng ký",
     step: 5,
   },
 ];
@@ -53,7 +54,9 @@ export default function Form({ activeIndex, children, classname }: Props) {
           )}
         >
           <div className="w-full flex justify-center">
-            <GroupIcon />
+            <Link href={"/dang-ky"}>
+              <GroupIcon />
+            </Link>
           </div>
           <div className="flex flex-col">
             {Steps?.map((item) => {

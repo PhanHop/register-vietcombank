@@ -86,10 +86,10 @@ export default function ModalSuccess({ trigger }: Props) {
                         </div>
                         <div className="text-2xl">Xác nhận thành công</div>
                         <div className="text-base text-[#6F6F6F]">
-                          Quý khách có thể liên hệ Chi nhánh Hoàng Mai theo số
-                          điện thoại 0204 56 78 90 - xyz@vcb.com.vn hoặc cán bộ
-                          ngân hàng sẽ liên hệ ngay với quý khách để hoàn thiện
-                          hồ sơ
+                          Chi nhánh Hồ Chí Minh sẽ liên hệ ngay với quý khách để
+                          hoàn thiện hồ sơ. Hoặc Quý khách có thể liên hệ Chi
+                          nhánh theo số điện thoại 028 3829 7245 hoặc email
+                          xyz@vietcombank.com.vn.
                         </div>
                       </div>
                       <div className="flex flex-col gap-y-2.5 px-12">
@@ -102,7 +102,7 @@ export default function ModalSuccess({ trigger }: Props) {
                         <div className="flex gap-x-2">
                           <CheckIcon />
                           <div className="text-sm">
-                            Email đã được gửi đến cán bộ chi nhánh phụ trách
+                            Email đã được gửi đến chi nhánh phục vụ
                           </div>
                         </div>
                       </div>

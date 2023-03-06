@@ -55,45 +55,23 @@ export default function Form4({}: Props) {
                 khách vào biểu mẫu đăng ký.
               </div>
             </div>
-            <div className="w-full">
+            <div className="grid grid-cols-2 gap-x-10 w-full gap-y-8">
               <SelectOption
                 label="Loại hình doanh nghiệp"
                 value={[{ value: "Tổ chức có tư cách pháp nhân" }]}
                 defaultValue="Tổ chức có tư cách pháp nhân"
               />
-            </div>
-            <div className="w-full h-[1px] bg-[#EAEAEA]"></div>
-            <div className="grid grid-cols-2 gap-x-10 w-full">
-              <div className="flex flex-col gap-y-8 col-span-1">
-                {Content?.map((item, index) => {
-                  return (
-                    index % 2 == 0 && (
-                      <FileInputIcon
-                        icon={item?.icon}
-                        label={item?.label}
-                        value={downloadFile ? item?.value : ""}
-                        key={item?.label}
-                        clickFile={handleClick}
-                      />
-                    )
-                  );
-                })}
-              </div>
-              <div className="flex flex-col gap-y-8 col-span-1 w-full">
-                {Content?.map((item, index) => {
-                  return (
-                    index % 2 !== 0 && (
-                      <FileInputIcon
-                        icon={item?.icon}
-                        label={item?.label}
-                        value={downloadFile ? item?.value : ""}
-                        key={item?.label}
-                        clickFile={handleClick}
-                      />
-                    )
-                  );
-                })}
-              </div>
+              {Content?.map((item, index) => {
+                return (
+                  <FileInputIcon
+                    icon={item?.icon}
+                    label={item?.label}
+                    value={downloadFile ? item?.value : ""}
+                    key={item?.label}
+                    clickFile={handleClick}
+                  />
+                );
+              })}
             </div>
             <Link href={"./form5"}>
               <Button text="Tiếp tục" />
