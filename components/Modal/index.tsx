@@ -92,8 +92,7 @@ export default function MyModal({ trigger }: Props) {
                               <div
                                 key={item?.value}
                                 className={classNames(
-                                  "w-[517px] p-6 flex items-center gap-x-4 rounded-[16px] hover:cursor-pointer",
-                                  { "bg-[#F7F7F7]": index !== 0 },
+                                  "w-[517px] p-6 flex items-center gap-x-4 rounded-[16px] hover:cursor-pointer bg-[#F7F7F7]",
                                   styles.activeModal
                                 )}
                               >
