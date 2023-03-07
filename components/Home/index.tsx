@@ -21,19 +21,19 @@ export default function Home() {
       <Header />
       <div
         className={classNames(
-          "px-8 pt-8 relative w-full  h-[calc(100vh_-_164px)]"
+          "px-8 pt-8 relative w-full h-full"
         )}
       >
         <div
           className={classNames(
-            "w-full h-full flex flex-col rounded-[12px]",
+            "w-full aspect-[1354/790] h-full flex flex-col rounded-[12px]",
             styles.bgImag
           )}
         >
           <div className="flex w-full justify-start items-center flex-col pt-[10%]">
             <div className="flex flex-col justify-start items-start gap-y-[200px] w-[1190px]">
               <div className="flex flex-col items-start gap-y-3">
-                <div className="flex items-start gap-x-5">
+                <div className="flex items-center gap-x-5">
                   <SunIcon />
                   <div className="flex flex-col gap-y-4 justify-center">
                     <div className="text-[40px] leading-10 text-[#000000]">

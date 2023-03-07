@@ -1,3 +1,25 @@
 .hoverInput:hover {
   background: linear-gradient(89.75deg, #F8FAEC 2.88%, #EAF7FF 99.78%);
 }
+
+.input[type='radio']:after {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  top: -1px;
+  left: 1px;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #6F6F6F;
+}
+
+.input[type='radio']:checked:after {
+  background-color: #007A47;
+  border: 2px solid #007A47 !important;
+}
+.input[type='radio']:checked{
+  border: 2px solid #007A47 !important;
+  background-color: #007A47;
+}

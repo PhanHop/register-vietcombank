@@ -15,5 +15,6 @@
 .bgImag{
   background-image: url('/Background1.jpg');
   /* background-size: 100% 100%; */
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

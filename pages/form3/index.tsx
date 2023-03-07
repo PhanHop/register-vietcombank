@@ -48,7 +48,7 @@ export default function Form3({}: Props) {
                     placeHolder="Nhập số tài khoản"
                     onFocus={(e) => {
                       setNumber(123);
-                      setPhone('123');
+                      setPhone("123");
                     }}
                   />
                   <div className="text-base text-[#9F9F9F]">
@@ -69,7 +69,7 @@ export default function Form3({}: Props) {
                         }}
                       >
                         <ResultInput
-                          number={item?.number}
+                          number={!!phone ? item?.number : 0}
                           money={!!phone ? item?.money : ""}
                           name="phone"
                           classNameDiv={

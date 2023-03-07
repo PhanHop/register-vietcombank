@@ -14,6 +14,7 @@ export default function FileInputIcon({
   label,
   value,
   icon,
+  placeHolder,
   clickFile,
 }: Props) {
   return (
@@ -28,8 +29,14 @@ export default function FileInputIcon({
             styles.hoverInput
           )}
         >
-          <div>{value && icon}</div>
-          {value}
+          {value ? (
+            <>
+              <div>{value && icon}</div>
+              <div>{value}</div>
+            </>
+          ) : (
+            <div className="text-[#9F9F9F]">{placeHolder}</div>
+          )}
         </div>
         <div
           className="rounded-[12px] min-w-[56px] border-[2px] border-solid flex items-center justify-center border-[#09A061] hover:bg-bg-linear-blue hover:cursor-pointer"

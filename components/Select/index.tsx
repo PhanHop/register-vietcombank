@@ -1,6 +1,7 @@
 import React from "react";
 import { Select } from "antd";
 import styles from "./styles.module.css";
+import ArrowDownIcon from "assets/icon/ic_24system_arrow_down_ink1.svg";
 type SelectProps = {
   value?: string;
 };
@@ -26,6 +27,7 @@ export default function SelectOption({
         {label}
       </label>
       <Select
+        suffixIcon={<ArrowDownIcon className={styles.icon}/>}
         placeholder={placeHolder}
         className={styles.customSelect}
         size="large"

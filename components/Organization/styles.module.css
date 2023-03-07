@@ -7,7 +7,7 @@
 }
 
 .boxShadow {
-  box-shadow: 0px 24px 28px -8px #334ea914;
+  box-shadow: 0px 33.6px 39.2px -11.2px rgba(89, 169, 51, 0.08);
   background: linear-gradient(#F4F4F4, #F4F4F4) padding-box,
     linear-gradient(to right, #96BF01, #0E5A2B) border-box;
   border: 3px solid transparent;

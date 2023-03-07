@@ -7,6 +7,7 @@ import MyModal from "../Modal";
 import Link from "next/link";
 import classNames from "classnames";
 import styles from "./styles.module.css";
+import Logo from "assets/icon/logo.svg";
 
 type Props = {};
 const header1 = ["Cá nhân", "Tổ chức", "Khách hàng ưu tiên"];
@@ -21,9 +22,9 @@ const tabHeader = ["Sản phẩm Dịch vụ", "Công cụ tiện ích", "Hỗ t
 export default function Header() {
   return (
     <div className="border-b-[1px] border-solid">
-      <div className="px-8 py-2">
+      <div className="px-8">
         <div className="flex justify-between">
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-4 py-1">
             {header1?.map((item: string) => {
               if (item === "Tổ chức") {
                 return (
@@ -33,7 +34,7 @@ export default function Header() {
                       <div
                         key={item}
                         className={classNames(
-                          "px-[10px] py-2 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer",
+                          "px-[10px] py-2.5 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer",
                           styles.activeBtn
                         )}
                       >
@@ -47,7 +48,7 @@ export default function Header() {
                 <div
                   key={item}
                   className={classNames(
-                    "px-[10px] py-2 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer",
+                    "px-[10px] py-2.5 text-[14px] flex items-center font-semibold text-[#144C27] hover:cursor-pointer",
                     styles.activeBtn
                   )}
                 >
@@ -62,7 +63,7 @@ export default function Header() {
                 <div
                   key={item}
                   className={classNames(
-                    "px-[10px] py-2 text-[14px] font-semibold text-[#144C27] hover:cursor-pointer",
+                    "px-[10px] py-1 text-[14px] font-semibold flex items-center text-[#144C27] hover:cursor-pointer",
                     styles.activeBtn
                   )}
                 >
@@ -77,18 +78,11 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="mt-2 px-8 pb-2 flex justify-between">
-        <div className="flex gap-x-8 items-center">
-          <div className="w-[156px] h-[62px] relative p-4">
-            <Link href={"/"}>
-              <Image
-                src={"/Logo1.jpg"}
-                alt="vcb"
-                layout="fill"
-                className="relative"
-              />
-            </Link>
-          </div>
+      <div className="px-8 flex justify-between pb-[4px]">
+        <div className="flex items-center gap-x-8">
+          <Link href={"/"}>
+            <Logo />
+          </Link>
           <div className="flex gap-x-8">
             {tabHeader?.map((item) => {
               return (
@@ -101,7 +95,7 @@ export default function Header() {
           </div>
         </div>
         <div>
-          <div className="flex gap-x-2 px-8 py-[14px] bg-[#D4F156] rounded-[12px]">
+          <div className="flex gap-x-2 px-8 py-[12px] bg-[#D4F156] rounded-[12px]">
             <BankIcon />
             <div className="flex gap-x-1">
               <div className="text-[16px] leading-5 font-medium">Đăng nhập</div>

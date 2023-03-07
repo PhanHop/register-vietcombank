@@ -28,7 +28,7 @@ export default function Home() {
         <Header />
         <div
           className={classNames(
-            "px-8 pt-8 relative w-full h-[calc(100vh_-_172px)] "
+            "px-8 pt-8 relative w-full h-[calc(100vh_-_136px)] "
           )}
         >
           <div
@@ -93,12 +93,12 @@ export default function Home() {
                     },
                     { "rounded-r-[120px]": index === 4 },
                     { "rounded-l-[120px]": index === 0 },
-                    index !== 2 ? "bg-[#FAFAFACC]" : "bg-[#FAFAFA]"
+                    index !== 2 ? "bg-[#FAFAFACC]" : styles.bgcolor
                   )}
                 >
                   <div
                     className={classNames(
-                      "w-20 h-20 bg-[#F4F4F4] rounded-[56px] flex items-center justify-center",
+                      "w-14 h-14 bg-[#FFFFFF] rounded-[56px] flex items-center justify-center",
                       index === 2 && styles.boxShadow
                     )}
                   >

@@ -1,10 +1,12 @@
 import Button from "@/components/Button";
 import Form from "@/components/Form";
 import Input from "@/components/Input";
+import FileInputIcon from "@/components/Input/FileInputIcon";
 import ModalSuccess from "@/components/Modal/ModalSuccess";
 import SelectOption from "@/components/Select";
 import { Label } from "@headlessui/react/dist/components/label/label";
 import Link from "next/link";
+import JpgIcon from "assets/icon/JPG.svg";
 import React, { useState } from "react";
 
 type Props = {};
@@ -34,7 +36,12 @@ export default function Form6({}: Props) {
     },
     {
       placeHolder: "Nhập địa chỉ",
-      value: [{ value: "Số 5 Công Trường Mê Linh, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh" }],
+      value: [
+        {
+          value:
+            "Số 5 Công Trường Mê Linh, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+        },
+      ],
     },
   ];
   const ContactInfo = [
@@ -49,10 +56,6 @@ export default function Form6({}: Props) {
     {
       placeHolder: "Nhập email",
       value: "nguyenduca@gmail.com",
-    },
-    {
-      placeHolder: "Nhập CMND/CCCD",
-      value: "00100999020304",
     },
   ];
 
@@ -132,6 +135,18 @@ export default function Form6({}: Props) {
                           />
                         );
                       })}
+                    {province ? (
+                      <FileInputIcon
+                        placeHolder="Tải CMND"
+                        icon={<JpgIcon />}
+                        value={"CanCuocCongDan_2.jpg"}
+                      />
+                    ) : (
+                      <FileInputIcon
+                        placeHolder="Tải CMND"
+                        icon={<JpgIcon />}
+                      />
+                    )}
                   </div>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React from "react";
+import styles from "./styles.module.css";
 
 type Props = {
   number?: number;
@@ -24,9 +25,10 @@ export default function ResultInput({
         <div className="flex gap-x-2.5">
           <div className="flex items-center">
             <input
+              style={{ width: "18px", height: "18px" }}
               type="radio"
               disabled={!number}
-              className="hover:cursor-pointer"
+              className={classNames("hover:cursor-pointer", styles["input"])}
               {...rest}
             />
           </div>

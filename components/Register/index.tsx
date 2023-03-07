@@ -14,11 +14,11 @@ export default function Register() {
         <div className={classNames("p-8 relative w-full w-ful h-[calc(100vh_-_98px)]")}>
           <div
             className={classNames(
-              "w-ful h-full flex flex-col px-[120px]",
+              "w-ful h-full flex flex-col px-[60px] lg:px-[80px] 2xl:px-[120px]",
               styles.bgImag
             )}
           >
-            <div className="w-[450px] h-full flex flex-col justify-center gap-y-10">
+            <div className="w-[450px] pb-[100px] h-full flex flex-col justify-center gap-y-10">
               <div className="flex flex-col gap-y-8 justify-center">
                 <div className="text-[32px] leading-10 font-medium">
                   Mở tài khoản trực tuyến của khách hàng tổ chức

@@ -1,5 +1,5 @@
 .customSelect div {
-  height: 56px !important;
+  height: 58px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,4 +21,10 @@
   border-color: #09A061 !important;
   border-width: 2px !important;
   border-style: solid !important;
+}
+.customSelect ~ .ant-select-arrow{
+  display: none !important;
+}
+.icon{
+  margin-top: 10px;
 }
