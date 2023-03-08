@@ -55,12 +55,15 @@ export default function Form4({}: Props) {
                 khách vào biểu mẫu đăng ký.
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-x-10 w-full gap-y-8">
+            <div className="w-full">
               <SelectOption
                 label="Loại hình doanh nghiệp"
                 value={[{ value: "Tổ chức có tư cách pháp nhân" }]}
                 defaultValue="Tổ chức có tư cách pháp nhân"
               />
+            </div>
+            <div className="w-full h-[1px] bg-[#EAEAEA]"></div>
+            <div className="grid grid-cols-2 gap-x-10 w-full gap-y-8">
               {Content?.map((item, index) => {
                 return (
                   <FileInputIcon

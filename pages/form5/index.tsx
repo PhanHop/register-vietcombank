@@ -17,7 +17,7 @@ export default function Form5({}: Props) {
         <div className="w-full min-h-[100vh] overflow-scroll relative py-12 2xl:py-20">
           <div className="flex items-center justify-center w-full aspect-[8/10] relative">
             <Image
-              src={"/anh1.png"}
+              src={"/tailieu1.png"}
               alt="anh"
               layout="fill"
               className="relative"
