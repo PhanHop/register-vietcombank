@@ -23,14 +23,14 @@ export default function ResultInput({
         )}
       >
         <div className="flex gap-x-2.5">
-          <div className="flex items-center">
+          <div className="flex items-start">
             <input
-              style={{ width: "18px", height: "18px" }}
               type="radio"
               disabled={!number}
               className={classNames("hover:cursor-pointer", styles["input"])}
               {...rest}
             />
+            <label htmlFor=""></label>
           </div>
           <div className="text-base flex items-center">
             {number || "--- --- ---"}

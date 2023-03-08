@@ -14,10 +14,10 @@ export default function Form5({}: Props) {
         activeIndex={[1, 2, 3, 4]}
         classname="!lg:px-[24px] xl:px-[44px] 2xl:px-[64px]"
       >
-        <div className="w-full min-h-[100vh] overflow-scroll relative py-20">
+        <div className="w-full min-h-[100vh] overflow-scroll relative py-12 2xl:py-20">
           <div className="flex items-center justify-center w-full aspect-[8/10] relative">
             <Image
-              src={"/anh.png"}
+              src={"/anh1.png"}
               alt="anh"
               layout="fill"
               className="relative"

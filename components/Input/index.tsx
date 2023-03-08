@@ -23,12 +23,14 @@ export default function Input({
         {label}
       </label>
       <input
+        id={value}
         value={value}
         placeholder={placeHolder}
         type={type}
         className="h-12 px-4 w-full rounded-[12px] border-[2px] border-solid border-[#EAEAEA] focus:outline-[#007A47]"
         {...rest}
       />
+      <label htmlFor={value}></label>
     </div>
   );
 }
