@@ -6,17 +6,22 @@ import Link from "next/link";
 
 type Props = {
   trigger?: ReactNode;
+  openModal?: boolean;
+  closeModal?: () => void;
 };
-export default function ModalRidirectVideo({ trigger }: Props) {
-  let [isOpen, setIsOpen] = useState(true);
-
-  function closeModal() {
-    setIsOpen(false);
-  }
+export default function ModalRidirectVideo({
+  trigger,
+  openModal,
+  closeModal,
+}: Props) {
   return (
     <>
-      <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+      <Transition appear show={openModal} as={Fragment}>
+        <Dialog
+          as="div"
+          className="relative z-10"
+          onClose={() => closeModal?.()}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -62,7 +67,7 @@ export default function ModalRidirectVideo({ trigger }: Props) {
                       </div>
                     </div>
                     <div className="p-4 border-t-[1px] border-solid border-[#EAEAEA]">
-                      <Link href={'/video'} className="outline-none">
+                      <Link href={"/video"} className="outline-none">
                         <button
                           className="bg-[#007A47] w-full h-full py-[14px] rounded-[12px] text-white outline-none"
                           onClick={closeModal}

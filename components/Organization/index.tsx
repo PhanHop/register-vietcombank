@@ -25,6 +25,10 @@ export default function Home() {
   ];
   const isMount = useIsMounted();
   const [open, setOpen] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
+  function closeModal() {
+    setOpenModal(false);
+  }
   return (
     <>
       <div className="w-full relative">
@@ -79,7 +83,10 @@ export default function Home() {
                   Tôi chưa có tài khoản
                 </div>
               </Link>
-              <div className="w-[355px] h-12 rounded-[12px] bg-[#FFFFFF] text-[16px] leading-5 text-[#007A47] items-center flex justify-center font-medium border-[2px] border-solid border-[#007A47]">
+              <div
+                className="w-[355px] h-12 rounded-[12px] bg-[#FFFFFF] text-[16px] leading-5 text-[#007A47] items-center flex justify-center font-medium border-[2px] border-solid border-[#007A47] hover:cursor-pointer"
+                onClick={() => setOpenModal(true)}
+              >
                 Tôi đã có tài khoản
               </div>
             </div>
@@ -129,7 +136,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <ModalRidirectVideo />
+      <ModalRidirectVideo openModal={openModal} closeModal={closeModal} />
     </>
   );
 }
