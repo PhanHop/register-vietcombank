@@ -36,20 +36,30 @@ export default function index({}: Props) {
             <div className="w-full h-full flex justify-center items-center pb-20">
               <div className="flex flex-col gap-y-0">
                 <div className="flex flex-col gap-y-3 items-center mb-[-60px]">
-                  <ContentItem
-                    content="Quản lý Tài khoản"
-                    icon={<PrivacyIcon />}
+                  <ModalVideo
+                    urlVideo="https://youtu.be/g1tWpcdC4p4"
+                    trigger={
+                      <ContentItem
+                        content="Quản lý Tài khoản"
+                        icon={<PrivacyIcon />}
+                      />
+                    }
                   />
                   <ArrowUp />
                 </div>
                 <div className="w-full flex gap-x-3 justify-center items-center">
                   <div className="relative">
-                    <CardLeft />
+                    <CardRight />
                     <div className="flex justify-center absolute flex-col items-center left-[-45px] gap-y-3">
                       <ArrowDown />
-                      <ContentItem
-                        content="Quản lý Khoản phải trả"
-                        icon={<BillIcon />}
+                      <ModalVideo
+                        urlVideo="https://youtu.be/3JWYlnWZ_yo"
+                        trigger={
+                          <ContentItem
+                            content="Quản lý Khoản phải trả"
+                            icon={<BillIcon />}
+                          />
+                        }
                       />
                     </div>
                   </div>
@@ -58,19 +68,24 @@ export default function index({}: Props) {
                     <LogoVideoIcon />
                     <div className="flex justify-center absolute flex-col items-center top-[230px] gap-y-3">
                       <ArrowDown />
-                      <ContentItem
-                        content="Quản lý Thanh khoản"
-                        icon={<BillIcon />}
+                      <ModalVideo
+                        urlVideo="https://youtu.be/mQueArWls98"
+                        trigger={
+                          <ContentItem
+                            content="Quản lý Thanh khoản"
+                            icon={<BillIcon />}
+                          />
+                        }
                       />
                     </div>
                   </div>
                   <ArrowLeft />
                   <div className="relative">
-                    <CardRight />
+                    <CardLeft />
                     <div className="flex justify-center absolute flex-col items-center left-[-45px] gap-y-3">
                       <ArrowDown />
                       <ModalVideo
-                        urlVideo="https://www.youtube.com/watch?v=GatNL0mmQGc"
+                        urlVideo="https://youtu.be/cm1Cg9QnZ48"
                         trigger={
                           <ContentItem
                             content="Quản lý Khoản phải thu"
