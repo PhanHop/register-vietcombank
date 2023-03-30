@@ -37,7 +37,7 @@ export default function index({}: Props) {
               <div className="flex flex-col gap-y-0">
                 <div className="flex flex-col gap-y-3 items-center mb-[-60px]">
                   <ModalVideo
-                    urlVideo="https://youtu.be/g1tWpcdC4p4"
+                    urlVideo=" https://youtu.be/5ptadhqhVwo"
                     trigger={
                       <ContentItem
                         content="Quản lý Tài khoản"
@@ -53,7 +53,7 @@ export default function index({}: Props) {
                     <div className="flex justify-center absolute flex-col items-center left-[-45px] gap-y-3">
                       <ArrowDown />
                       <ModalVideo
-                        urlVideo="https://youtu.be/3JWYlnWZ_yo"
+                        urlVideo=" https://youtu.be/zhUaBjYRZac"
                         trigger={
                           <ContentItem
                             content="Quản lý Khoản phải trả"
@@ -69,7 +69,7 @@ export default function index({}: Props) {
                     <div className="flex justify-center absolute flex-col items-center top-[230px] gap-y-3">
                       <ArrowDown />
                       <ModalVideo
-                        urlVideo="https://youtu.be/mQueArWls98"
+                        urlVideo=" https://youtu.be/yUJKOsJJdnU"
                         trigger={
                           <ContentItem
                             content="Quản lý Thanh khoản"
@@ -85,7 +85,7 @@ export default function index({}: Props) {
                     <div className="flex justify-center absolute flex-col items-center left-[-45px] gap-y-3">
                       <ArrowDown />
                       <ModalVideo
-                        urlVideo="https://youtu.be/cm1Cg9QnZ48"
+                        urlVideo=" https://youtu.be/yUJKOsJJdnU"
                         trigger={
                           <ContentItem
                             content="Quản lý Khoản phải thu"

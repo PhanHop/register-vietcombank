@@ -33,7 +33,7 @@ export default function HeaderVideo() {
             <div className="font-medium">Maker 1617</div>
           </div>
           <ModalVideo
-            urlVideo="https://www.youtube.com/watch?v=GatNL0mmQGc"
+            urlVideo="https://youtu.be/UTvAqSRgXFs"
             trigger={
               <div className="bg-[#FFEEED] w-8 h-8 rounded-[52px] flex items-center justify-center hover:cursor-pointer">
                 <LogOutIcon />
