@@ -69,7 +69,7 @@ export default function index({}: Props) {
                     <div className="flex justify-center absolute flex-col items-center top-[230px] gap-y-3">
                       <ArrowDown />
                       <ModalVideo
-                        urlVideo=" https://youtu.be/yUJKOsJJdnU"
+                        urlVideo="https://youtu.be/JcpvZ-5qB7Y"
                         trigger={
                           <ContentItem
                             content="Quản lý Thanh khoản"
